@@ -16,8 +16,12 @@ function API() {
  * Database connection
  */
 function DB($db_dsn) {
-    $dbh = new PDO($db_dsn);  
-    
+
+    try {
+        $dbh = new PDO($db_dsn);
+    } catch(Exception $e) {
+        die(var_dump($e));
+    }
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $dbh->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES utf8');
     $dbh->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);

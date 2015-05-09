@@ -1,3 +1,4 @@
 <?php
 
+define('APP_ROOT', dirname(dirname(__FILE__)));
 define('DB_DSN', 'what-a-duck???');
