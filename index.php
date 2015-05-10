@@ -40,7 +40,26 @@ $app->post('/api/here', 'API', function() use ($app, $db) {
         $id = !empty($details['id']) ? $details['id'] : false;
         $sql = sprintf("UPDATE events SET updated_at = NOW() WHERE id = %d", $id);
     } else {
-        $sql = sprintf("INSERT INTO events (client_id, mac, minor, major, created_at, updated_at) VALUES ('%s', '%s', '%s', '%s', NOW(), NOW())", $data['client_id'], $data['mac'], $data['minor'], $data['major']);    
+        $sql = sprintf("SELECT id FROM beacons WHERE mac = '%s' AND minor = '%s' AND major = '%s'", $data['mac'], $data['minor'], $data['major']);
+        $res = $db->query($sql);
+        
+        $beacon_id = false;
+        if ($res) {
+            $beacon_id = $res->fetchColumn();
+        }
+        
+        if (!$beacon_id) {
+            $sql = sprintf("INSERT INTO beacons (mac, minor, major) VALUES ('%s', '%d', '%d') RETURNING id", $data['mac'], $data['minor'], $data['major']);
+            
+            $res = $db->query($sql);
+            if ($res) {
+                $beacon_id = $res->fetchColumn();
+            }
+        }
+        
+        if ($beacon_id) {
+            $sql = sprintf("INSERT INTO events (client_id, beacon_id, created_at, updated_at) VALUES ('%s', '%d', NOW(), NOW())", $data['client_id'], $beacon_id);    
+        }
     }
     
     $db->exec($sql);
