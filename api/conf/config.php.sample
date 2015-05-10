@@ -1,4 +1,8 @@
 <?php
 
 define('APP_ROOT', dirname(dirname(__FILE__)));
-define('DB_DSN', 'what-a-duck???');
+define('DB_DSN', 'pgsql:dbname=<>;host=<>;user=<>;password=<>');
+
+define('CLIENT_ID', '<>');
+define('CLIENT_SECRET', '<>');
+define('PROJECT_KEY', '<>');
