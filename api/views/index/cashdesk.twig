@@ -18,7 +18,7 @@ Cashier desk
     <div class="col-xs-12">
         <div class="panel panel-default">
             <div class="panel-heading">Customer</div>
-            <div class="panel-body" id="partial-progress">
+            <div class="panel-body" id="partial-greetings">
                 {% include 'partials/greetings.twig' %}
             </div>
         </div>
@@ -30,11 +30,10 @@ Cashier desk
 
 <script type="text/javascript">
     function pollProgress() {
-        console.log('here');
         jQuery.ajax({
             url: '/ajax/greetings',
             success: function(data) {
-                jQuery('#partial-progress').html(data);
+                jQuery('#partial-greetings').html(data);
             }
         });
         setTimeout(pollProgress, 3000); // you could choose not to continue on failure...
