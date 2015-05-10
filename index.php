@@ -28,18 +28,47 @@ $app->get('/my', function() use ($app, $db) {
 });
 
 $app->get('/cashdesk', function() use($app, $db) {
-    $app->render('index/cashdesk.twig');
+    $data['name'] = 'John Doe';
+    $data['percent'] = 13;
+    $data['text'] = 'Hi_ecomhack2015';
+    
+    $sql = sprintf('SELECT state_id FROM beacon_to_state WHERE beacon_id = %d', 1);
+    $res = $db->query($sql);
+    
+    $state_id = false;
+    if ($res) {
+        $state_id = $res->fetchColumn();
+    }
+
+    $data['isDiscount'] = (1 == $state_id);
+    
+    $app->render('index/cashdesk.twig', $data);
 });
 
 $app->get('/ajax/greetings', function() use($app, $db) {
-    $app->render('partials/greetings.twig');
+    $data['name'] = 'John Doe';
+    $data['percent'] = 13;
+    $data['text'] = 'Hi_ecomhack2015';
+    
+    $sql = sprintf('SELECT state_id FROM beacon_to_state WHERE beacon_id = %d', 1);
+    $res = $db->query($sql);
+    
+    $state_id = false;
+    if ($res) {
+        $state_id = $res->fetchColumn();
+    }
+    $data['isDiscount'] = (1 == $state_id);
+    
+    $app->render('partials/greetings.twig', $data);
 });
 
 $app->post('/api/here', 'API', function() use ($app, $db) {
+    $beacon_id = false;
+    
     $input = file_get_contents('php://input');
     $data = json_decode($input, true);
     
-    $res = $db->query("SELECT id, client_id FROM events ORDER BY id DESC LIMIT 1");
+    $res = $db->query("SELECT id, client_id, beacon_id FROM events ORDER BY id DESC LIMIT 1");
     $details = false;
     if ($res) {
         $details = $res->fetch();
@@ -51,18 +80,18 @@ $app->post('/api/here', 'API', function() use ($app, $db) {
     if ($current_client_id && ($current_client_id == $client_id)) {
         $id = !empty($details['id']) ? $details['id'] : false;
         $sql = sprintf("UPDATE events SET updated_at = NOW() WHERE id = %d", $id);
+        
+        $beacon_id = !empty($details['beacon_id']) ? $details['beacon_id'] : false;
     } else {
-        $sql = sprintf("SELECT id FROM beacons WHERE mac = '%s' AND minor = '%s' AND major = '%s'", $data['mac'], $data['minor'], $data['major']);
+        $sql = sprintf("SELECT id FROM beacons WHERE (mac = '%s') AND (minor = '%d') AND (major = '%d')", $data['mac'], $data['minor'], $data['major']);
         $res = $db->query($sql);
         
-        $beacon_id = false;
         if ($res) {
             $beacon_id = $res->fetchColumn();
         }
         
         if (!$beacon_id) {
             $sql = sprintf("INSERT INTO beacons (mac, minor, major) VALUES ('%s', '%d', '%d') RETURNING id", $data['mac'], $data['minor'], $data['major']);
-            
             $res = $db->query($sql);
             if ($res) {
                 $beacon_id = $res->fetchColumn();
@@ -80,18 +109,33 @@ $app->post('/api/here', 'API', function() use ($app, $db) {
     }
     
     if ($beacon_id) {
-        $sql = sprintf("UPDATE beacon_to_state SET state_id = %d WHERE beacon_id = %d", 1, $beacon_id);
-        $db->exec($sql);
+        $sql = sprintf('SELECT state_id FROM beacon_to_state WHERE beacon_id = %d', $beacon_id);
+        $res = $db->query($sql);
+        
+        if ($res) {
+            $state_id = $res->fetchColumn();
+        
+            $sql = false;
+            if ($state_id != 1) {
+                $sql = sprintf("UPDATE beacon_to_state SET state_id = %d WHERE beacon_id = %d", 1, $beacon_id);
+            }
+        } else {
+            $sql = sprintf('INSERT INTO beacon_to_state (state_id, beacon_id) VALUES (%d, %d)', 1, $beacon_id);
+        }
+        
+        if (!empty($sql)) {
+            $db->exec($sql);    
+        }
     }
     
-    $app->render(200, array('response' => array('success' => true)));
+    $app->render(200, array('response' => array('success' => true, 'sql' => $sql)));
 });
 
 $app->post("/api/left", 'API', function() use($app, $db) {
     $input = file_get_contents('php://input');
     $data = json_decode($input, true);
     
-    $sql = sprintf("SELECT id FROM beacons WHERE mac = '%s' AND minor = '%s' AND major = '%s'", $data['mac'], $data['minor'], $data['major']);
+    $sql = sprintf("SELECT id FROM beacons WHERE (mac = '%s') AND (minor = '%d') AND (major = '%d')", $data['mac'], $data['minor'], $data['major']);
     $res = $db->query($sql);
     
     $beacon_id = false;
@@ -100,11 +144,26 @@ $app->post("/api/left", 'API', function() use($app, $db) {
     }    
    
     if ($beacon_id) {
-        $sql = sprintf("UPDATE beacon_to_state SET state_id = %d WHERE beacon_id = %d", 2, $beacon_id);
-        $db->exec($sql);
+        $sql = sprintf('SELECT state_id FROM beacon_to_state WHERE beacon_id = %d', $beacon_id);
+        $res = $db->query($sql);
+        
+        if ($res) {
+            $state_id = $res->fetchColumn();
+        
+            $sql = false;
+            if ($state_id != 2) {
+                $sql = sprintf("UPDATE beacon_to_state SET state_id = %d WHERE beacon_id = %d", 2, $beacon_id);
+            }
+        } else {
+            $sql = sprintf('INSERT INTO beacon_to_state (state_id, beacon_id) VALUES (%d, %d)', 2, $beacon_id);
+        }
+        
+        if (!empty($sql)) {
+            $db->exec($sql);    
+        }
     }
     
-    $app->render(200, array('response' => array('success' => true)));
+    $app->render(200, array('response' => array('success' => true, 'sql' => $sql)));
 });
 
 $app->run();

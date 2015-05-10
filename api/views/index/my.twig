@@ -28,20 +28,4 @@ My profile
     
 </div>
 
-<script type="text/javascript">
-    function pollProgress() {
-        console.log('here');
-        jQuery.ajax({
-            url: '/ajax/greetings',
-            success: function(data) {
-                jQuery('#partial-progress').html(data);
-            }
-        });
-        setTimeout(pollProgress, 3000); // you could choose not to continue on failure...
-    }
-
-    jQuery(document).ready(function() {
-        setTimeout(pollProgress, 3000);
-    });
-</script>
 {% endblock %}

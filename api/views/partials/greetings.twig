@@ -1,0 +1,14 @@
+<div class="text-center">
+    {% if isDiscount %}
+    <h2>{{name}}</h2>
+    <p>
+        {% include 'partials/barcode.twig' %}    
+    </p>
+    
+    <h3>Discount {{percent}}%</h3>
+
+    <a class="btn btn-default btn-lg btn-block" href="/cashdesk">Apply discount</a>
+    {% else %}
+    <h2>Waiting...</h2>
+    {% endif %}
+</div>
