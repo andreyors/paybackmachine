@@ -114,7 +114,6 @@ public class ListBeaconsActivity extends Activity {
                 if (request.length() > 0) {
                     if (distance < 0.7) { // closer than 1 meter
                         try {
-
                             response = HTTPClient.get(URL.concat("api/here"), request);
                         } catch (Exception e) {
                             e.printStackTrace();
