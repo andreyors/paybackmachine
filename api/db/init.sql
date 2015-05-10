@@ -1,2 +1,13 @@
 CREATE DATABASE payback;
 
+\c payback
+
+CREATE TABLE events (id SERIAL, client_id VARCHAR(255), mac VARCHAR(17), minor INTEGER, major INTEGER, created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT (NOW() AT TIME ZONE 'UTC'), updated_at TIMESTAMP WITHOUT TIME ZONE DEFAULT (NOW() AT TIME ZONE 'UTC'));
+
+CREATE TABLE shops (id SERIAL, title VARCHAR(255), address VARCHAR(255), is_active BOOLEAN DEFAULT FALSE);
+
+CREATE TABLE beacons (id SERIAL, title VARCHAR(255), minor INTEGER, major INTEGER, is_active BOOLEAN DEFAULT FALSE);
+
+CREATE TABLE shop_to_beacon (shop_id INTEGER, beacon_id INTEGER);
+
+CREATE TABLE users (id SERIAL, login VARCHAR(32), passwd VARCHAR(40), );

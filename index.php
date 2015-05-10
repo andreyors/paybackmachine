@@ -23,17 +23,29 @@ $app->get('/', function() use ($app, $db) {
   $app->render('index/index.twig');
 });
 
-$app->get('/api/here', 'API', function() use ($app, $db) {
-    $res = $db->query('SELECT NOW()');
-    
-    $time = 'NA';
-    
+$app->post('/api/here', 'API', function() use ($app, $db) {
+    $res = $db->query("SELECT id, client_id FROM events ORDER BY id DESC LIMIT 1");
+    $details = false;
     if ($res) {
-        $time = $res->fetchColumn();
+        $details = $res->fetch();
     }
     
-    die(var_dump($time));
-
+    $input = file_get_contents('php://input');
+    $data = json_decode($input, true);
+    
+    $current_client_id = !empty($data['client_id']) ? $data['client_id'] : false;
+    $client_id = !empty($details['client_id']) ? $details['client_id'] : false;
+    
+    if ($current_client_id && ($current_client_id == $client_id)) {
+        $id = !empty($details['id']) ? $details['id'] : false;
+        $sql = sprintf("UPDATE events SET updated_at = NOW() WHERE id = %d", $id);
+    } else {
+        $sql = sprintf("INSERT INTO events (client_id, mac, minor, major, created_at, updated_at) VALUES ('%s', '%s', '%s', '%s', NOW(), NOW())", $data['client_id'], $data['mac'], $data['minor'], $data['major']);    
+    }
+    
+    $db->exec($sql);
+    
+    $app->render(200, array('response' => array('success' => true, 'sql' => $sql)));
 });
 
 $app->run();
