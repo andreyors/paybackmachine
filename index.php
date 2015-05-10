@@ -4,6 +4,7 @@ include 'api/vendor/autoload.php';
 
 include 'api/lib/common.php';
 include 'api/conf/config.php';
+include 'api/lib/sphereio.php';
 
 $app = new \Slim\Slim(array(
     'debug' => true,
@@ -24,12 +25,18 @@ $app->get('/', function() use ($app, $db) {
 });
 
 $app->get('/my', function() use ($app, $db) {
-    $app->render('index/my.twig');
+    $sph = new SphereIO(CLIENT_ID, CLIENT_SECRET, PROJECT_KEY);
+    $products = $sph->getProducts();
+    
+    $app->render('index/my.twig', $products);
 });
 
 $app->get('/cashdesk', function() use($app, $db) {
-    $data['name'] = 'John Doe';
-    $data['percent'] = 13;
+    $sph = new SphereIO(CLIENT_ID, CLIENT_SECRET, PROJECT_KEY);
+    $orders = $sph->getOrders();
+    
+    $data['name'] = 'Piotr Zimmerman';
+    $data['percent'] = 25;
     $data['text'] = 'Hi_ecomhack2015';
     
     $sql = sprintf('SELECT state_id FROM beacon_to_state WHERE beacon_id = %d', 1);
@@ -46,8 +53,8 @@ $app->get('/cashdesk', function() use($app, $db) {
 });
 
 $app->get('/ajax/greetings', function() use($app, $db) {
-    $data['name'] = 'John Doe';
-    $data['percent'] = 13;
+    $data['name'] = 'Piotr Zimmerman';
+    $data['percent'] = 25;
     $data['text'] = 'Hi_ecomhack2015';
     
     $sql = sprintf('SELECT state_id FROM beacon_to_state WHERE beacon_id = %d', 1);
@@ -126,8 +133,6 @@ $app->post('/api/here', 'API', function() use ($app, $db) {
             }
         }
     }
-   
-   
     
     $app->render(200, array('response' => array('success' => true, 'sql' => $sql)));
 });

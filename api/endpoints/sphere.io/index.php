@@ -1,5 +1,5 @@
 <?php
-  include('sphereio.php');
+  include('../../lib/sphereio.php');
   
   $sph = new SphereIO(CLIENT_ID, CLIENT_SECRET, PROJECT_KEY);
   $result = $sph->getProducts();
