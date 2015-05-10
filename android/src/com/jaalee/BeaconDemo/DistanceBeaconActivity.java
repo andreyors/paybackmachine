@@ -8,9 +8,6 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.Toast;
 import com.jaalee.sdk.*;
-import com.onemanpower.HTTPClient;
-import com.onemanpower.JSONUtil;
-import org.json.JSONException;
 
 import java.util.List;
 
@@ -103,36 +100,17 @@ public class DistanceBeaconActivity extends Activity {
     }
 
     private void updateDistanceView(Beacon foundBeacon) {
-        float distance;
-
         if (segmentLength == -1) {
             return;
         }
 
-        distance = computeDotPosY(foundBeacon);
-
-        String request = null;
-        if (distance < 1.) { // closer than 1 meter
-            try {
-                request = JSONUtil.pack("chosenOne", foundBeacon.getMacAddress(), foundBeacon.getMinor(), foundBeacon.getMajor());
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-
-            if (request.length() > 0) {
-                try {
-                    String response = HTTPClient.get(URL.concat("/api/here"), request);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-
-        dotView.animate().translationY(distance).start();
+        dotView.animate().translationY(computeDotPosY(foundBeacon)).start();
     }
+
 
     private int computeDotPosY(Beacon beacon) {
         double distance = Math.min(Utils.computeAccuracy(beacon), 6.0);
+
         return startY + (int) (segmentLength * (distance / 6.0));
     }
 

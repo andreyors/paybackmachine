@@ -33,130 +33,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.jaalee.BeaconDemo" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a519321-646c-4c52-9178-0cb5ed3db45b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/connection/AlertService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/utils/AuthMath.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/BLEDevice.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/connection/BatteryLifeService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/Beacon.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/connection/BeaconAudioService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/connection/BeaconCharacteristics.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/connection/BeaconConnection.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/BeaconManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/connection/BeaconNameService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/service/BeaconService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/connection/BeaconStateService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/connection/BeaconTxPower.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/connection/BluetoothService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/connection/ConnectionCallback.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/DeviceDiscoverListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/ErrorListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/internal/HashCode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/utils/JaaleeBeacons.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/connection/JaaleeDefine.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/connection/JaaleeService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/connection/JaaleeUuid.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/utils/L.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/MonitoringListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/service/MonitoringRegion.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/service/MonitoringResult.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/internal/Objects.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/internal/Preconditions.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/RangingListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/service/RangingRegion.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/service/RangingResult.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/Region.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/RestartCompletedListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/service/ScanPeriodData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/ServiceReadyCallback.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/internal/UnsignedInteger.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/internal/UnsignedInts.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/internal/UnsignedLong.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/internal/UnsignedLongs.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/Utils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaalee/sdk/connection/WriteCallback.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/AllDemosActivity$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity$2$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity$2$1$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity$2$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity$3$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity$3$1$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity$3$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity$4$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity$4$1$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity$4$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity$5$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity$5$1$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity$5$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity$6$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity$6$1$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity$6$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity$7$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity$7$1$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity$7$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity$8$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity$8$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity$8$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/CharacteristicsDemoActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/sdk/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/sdk/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/sdk/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/sdk/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/sdk/R$menu.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/sdk/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/sdk/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/sdk/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/jaalee/sdk/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/layout/characteristics_demo.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/jaalee/BeaconDemo/CharacteristicsDemoActivity.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/AllDemosActivity$1.class" afterPath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/AllDemosActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/AllDemosActivity$2.class" afterPath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/AllDemosActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/AllDemosActivity.class" afterPath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/AllDemosActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/BuildConfig.class" afterPath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/BuildConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/DistanceBackgroundView.class" afterPath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/DistanceBackgroundView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/DistanceBeaconActivity$1$1.class" afterPath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/DistanceBeaconActivity$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/DistanceBeaconActivity$1.class" afterPath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/DistanceBeaconActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/DistanceBeaconActivity$2.class" afterPath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/DistanceBeaconActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/DistanceBeaconActivity$3.class" afterPath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/DistanceBeaconActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/DistanceBeaconActivity.class" afterPath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/DistanceBeaconActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/LeDeviceListAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/LeDeviceListAdapter$ViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/LeDeviceListAdapter.class" afterPath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/LeDeviceListAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/ListBeaconsActivity$1$1.class" afterPath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/ListBeaconsActivity$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/ListBeaconsActivity$1.class" afterPath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/ListBeaconsActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/ListBeaconsActivity$2.class" afterPath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/ListBeaconsActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/ListBeaconsActivity$3.class" afterPath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/ListBeaconsActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/ListBeaconsActivity$4.class" afterPath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/ListBeaconsActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/ListBeaconsActivity.class" afterPath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/ListBeaconsActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/NotifyDemoActivity$1.class" afterPath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/NotifyDemoActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/NotifyDemoActivity$2.class" afterPath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/NotifyDemoActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/NotifyDemoActivity.class" afterPath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/NotifyDemoActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/R$attr.class" afterPath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/R$drawable.class" afterPath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/R$id.class" afterPath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/R$layout.class" afterPath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/R$menu.class" afterPath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/R$menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/R$string.class" afterPath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/R.class" afterPath="$PROJECT_DIR$/bin/classes/com/jaalee/BeaconDemo/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jaalee/BeaconDemo/AllDemosActivity.java" afterPath="$PROJECT_DIR$/src/com/jaalee/BeaconDemo/AllDemosActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/AndroidManifest.xml" afterPath="$PROJECT_DIR$/bin/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/jaalee/BeaconDemo/BuildConfig.java" afterPath="$PROJECT_DIR$/gen/com/jaalee/BeaconDemo/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jaalee/BeaconDemo/DistanceBeaconActivity.java" afterPath="$PROJECT_DIR$/src/com/jaalee/BeaconDemo/DistanceBeaconActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jaalee/BeaconDemo/ListBeaconsActivity.java" afterPath="$PROJECT_DIR$/src/com/jaalee/BeaconDemo/ListBeaconsActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/all_demos.xml" afterPath="$PROJECT_DIR$/res/layout/all_demos.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/proguard.txt" afterPath="$PROJECT_DIR$/bin/proguard.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
-    </list>
+    <list default="true" id="1a519321-646c-4c52-9178-0cb5ed3db45b" name="Default" comment="" />
     <ignored path="Jaalee-Beacon-Android-SDK-Demo.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/bin/classes/" />
@@ -181,7 +58,7 @@
       <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.7">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
@@ -192,7 +69,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/jaalee/BeaconDemo/AllDemosActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+              <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -200,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DistanceBeaconActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DistanceBeaconActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/jaalee/BeaconDemo/DistanceBeaconActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="157" column="51" selection-start-line="157" selection-start-column="51" selection-end-line="157" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.8469388">
+              <caret line="143" column="13" selection-start-line="143" selection-start-column="13" selection-end-line="143" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -212,11 +89,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListBeaconsActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ListBeaconsActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/jaalee/BeaconDemo/ListBeaconsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="6.2755103">
-              <caret line="181" column="0" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DistanceBackgroundView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/jaalee/BeaconDemo/DistanceBackgroundView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LeDeviceListAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/jaalee/BeaconDemo/LeDeviceListAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -234,56 +133,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LeDeviceListAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/jaalee/BeaconDemo/LeDeviceListAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JSONUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/onemanpower/JSONUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="HTTPClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/onemanpower/HTTPClient.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="58" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
+              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ViewPropertyAnimator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../android-sdk-macosx/sources/android-21/android/view/ViewPropertyAnimator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="632" column="32" selection-start-line="632" selection-start-column="32" selection-end-line="632" selection-end-column="32" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -329,7 +186,7 @@
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -352,8 +209,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -368,7 +225,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Jaalee-Beacon-Android-SDK-Demo" />
+              <option name="myItemId" value="android" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -378,7 +235,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Jaalee-Beacon-Android-SDK-Demo" />
+              <option name="myItemId" value="android" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -400,7 +257,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Jaalee-Beacon-Android-SDK-Demo" />
+              <option name="myItemId" value="android" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -415,6 +272,10 @@
               <option name="myItemId" value="jaalee" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -422,7 +283,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Jaalee-Beacon-Android-SDK-Demo" />
+              <option name="myItemId" value="android" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -442,158 +303,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jaalee-Beacon-Android-SDK-Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jaalee-Beacon-Android-SDK-Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jaalee-Beacon-Android-SDK-Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jaalee-Beacon-Android-SDK-Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jaalee-Beacon-Android-SDK-Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jaalee-Beacon-Android-SDK-Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jaalee-Beacon-Android-SDK-Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jaalee-Beacon-Android-SDK-Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-xhdpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jaalee-Beacon-Android-SDK-Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jaalee-Beacon-Android-SDK-Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-mdpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jaalee-Beacon-Android-SDK-Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jaalee-Beacon-Android-SDK-Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jaalee-Beacon-Android-SDK-Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jaalee-Beacon-Android-SDK-Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-hdpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jaalee-Beacon-Android-SDK-Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jaalee-Beacon-Android-SDK-Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.XML" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -764,43 +486,44 @@
       <option name="number" value="Default" />
       <updated>1431192003546</updated>
       <workItem from="1431192007168" duration="12099000" />
+      <workItem from="1431210677490" duration="6243000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12099000" />
+    <option name="totallyTimeSpent" value="18342000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298611" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920793" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.49444443" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920793" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.50762016" sideWeight="0.20902778" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5052161" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7252475" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.50762016" sideWeight="0.79097223" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50762016" sideWeight="0.21319444" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5052161" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7245017" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.50762016" sideWeight="0.78680557" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.4947839" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22708334" sideWeight="0.4947839" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282532" sideWeight="0.49444443" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298611" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.49444443" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -816,6 +539,90 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jaalee/BeaconDemo/AllDemosActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jaalee/BeaconDemo/DistanceBeaconActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="157" column="51" selection-start-line="157" selection-start-column="51" selection-end-line="157" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jaalee/BeaconDemo/ListBeaconsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jaalee/BeaconDemo/NotifyDemoActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="51" selection-start-line="49" selection-start-column="51" selection-end-line="49" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jaalee/BeaconDemo/LeDeviceListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/onemanpower/JSONUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/onemanpower/HTTPClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="58" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/jaalee/sdk/utils/L.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -835,27 +642,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../android-sdk-macosx/sources/android-21/java/util/concurrent/TimeUnit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="75" column="4" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jaalee/BeaconDemo/DistanceBackgroundView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/jaalee/sdk/ServiceReadyCallback.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12727273">
           <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -882,7 +672,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -923,7 +712,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -931,7 +719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -964,44 +751,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.7">
+        <state vertical-scroll-proportion="0.0">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../android-sdk-macosx/sources/android-21/android/view/ViewPropertyAnimator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="632" column="32" selection-start-line="632" selection-start-column="32" selection-end-line="632" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jaalee/BeaconDemo/AllDemosActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/onemanpower/HTTPClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="58" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../android-sdk-macosx/sources/android-21/android/widget/Toast.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33281493">
-          <caret line="83" column="28" selection-start-line="83" selection-start-column="28" selection-end-line="83" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1014,13 +765,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jaalee/BeaconDemo/DistanceBeaconActivity.java">
+    <entry file="file://$PROJECT_DIR$/../../android-sdk-macosx/sources/android-21/android/view/ViewPropertyAnimator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="157" column="51" selection-start-line="157" selection-start-column="51" selection-end-line="157" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.33163264">
+          <caret line="632" column="32" selection-start-line="632" selection-start-column="32" selection-end-line="632" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1032,10 +781,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/onemanpower/JSONUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/com/jaalee/BeaconDemo/AllDemosActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/onemanpower/JSONUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.57908165">
           <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/onemanpower/HTTPClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1046,6 +815,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jaalee/BeaconDemo/DistanceBackgroundView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1062,9 +839,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/jaalee/BeaconDemo/ListBeaconsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="6.2755103">
-          <caret line="181" column="0" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jaalee/BeaconDemo/DistanceBeaconActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8469388">
+          <caret line="143" column="13" selection-start-line="143" selection-start-column="13" selection-end-line="143" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

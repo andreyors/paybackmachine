@@ -14,6 +14,9 @@ import android.widget.ListView;
 import android.widget.Toast;
 import com.jaalee.sdk.*;
 import com.jaalee.sdk.utils.L;
+import com.onemanpower.HTTPClient;
+import com.onemanpower.JSONUtil;
+import org.json.JSONException;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -21,188 +24,208 @@ import java.util.List;
 
 /**
  * http://www.jaalee.com/
+ *
  * @author JAALEE, Inc.
- * We have been trying to provide better services and products! Jaalee Beacon makes 
- * life more simple and cheerful! If you are interested in our product, 
- * please contact us in following ways. We will provide the best service wholeheartedly for you!
- * 
- * Buy Jaalee Beacon: sales@jaalee.com
- * 
- * Technical Support: dev@jaalee.com
- * 
+ *         We have been trying to provide better services and products! Jaalee Beacon makes
+ *         life more simple and cheerful! If you are interested in our product,
+ *         please contact us in following ways. We will provide the best service wholeheartedly for you!
+ *         <p>
+ *         Buy Jaalee Beacon: sales@jaalee.com
+ *         <p>
+ *         Technical Support: dev@jaalee.com
  */
 public class ListBeaconsActivity extends Activity {
 
-  private static final String TAG = ListBeaconsActivity.class.getSimpleName();
+    static final String URL = "http://paybackmachine-andreyors.c9.io/";
 
-  public static final String EXTRAS_TARGET_ACTIVITY = "extrasTargetActivity";
-  public static final String EXTRAS_BEACON = "extrasBeacon";
+    private static final String TAG = ListBeaconsActivity.class.getSimpleName();
 
-  private static final int REQUEST_ENABLE_BT = 1234;
-  
-  private static final String BEACON_PROXIMITY_UUID = "b9407f30-f5f8-466e-aff9-25556b57fe6d";
-  private static final Region ALL_BEACONS_REGION = new Region("rid", null, null, null);
+    public static final String EXTRAS_TARGET_ACTIVITY = "extrasTargetActivity";
+    public static final String EXTRAS_BEACON = "extrasBeacon";
 
-  private BeaconManager beaconManager;
-  private LeDeviceListAdapter adapter;
+    private static final int REQUEST_ENABLE_BT = 1234;
 
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.main);
-    getActionBar().setDisplayHomeAsUpEnabled(true);
+    private static final String BEACON_PROXIMITY_UUID = "b9407f30-f5f8-466e-aff9-25556b57fe6d";
+    private static final Region ALL_BEACONS_REGION = new Region("rid", null, null, null);
 
-    // Configure device list.
-    adapter = new LeDeviceListAdapter(this);
-    ListView list = (ListView) findViewById(R.id.device_list);
-    list.setAdapter(adapter);
-    list.setOnItemClickListener(createOnItemClickListener());
+    private BeaconManager beaconManager;
+    private LeDeviceListAdapter adapter;
 
-    // Configure verbose debug logging.
-    L.enableDebugLogging(false);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
 
-    // Configure BeaconManager.
-    beaconManager = new BeaconManager(this);
-    beaconManager.setRangingListener(new RangingListener() {
-      @Override
-      public void onBeaconsDiscovered(Region region, final List beacons) {
-        // Note that results are not delivered on UI thread.
-        runOnUiThread(new Runnable() {
-          @Override
-          public void run() {
-            // Note that beacons reported here are already sorted by estimated
-            // distance between device and beacon.
-            List<Beacon> JaaleeBeacons = filterBeacons(beacons);
-            getActionBar().setSubtitle("Found beacons: " + JaaleeBeacons.size());
-            
-            adapter.replaceWith(JaaleeBeacons);
-          }
+        // Configure device list.
+        adapter = new LeDeviceListAdapter(this);
+        ListView list = (ListView) findViewById(R.id.device_list);
+        list.setAdapter(adapter);
+        list.setOnItemClickListener(createOnItemClickListener());
+
+        // Configure verbose debug logging.
+        L.enableDebugLogging(false);
+
+        // Configure BeaconManager.
+        beaconManager = new BeaconManager(this);
+        beaconManager.setRangingListener(new RangingListener() {
+            @Override
+            public void onBeaconsDiscovered(Region region, final List beacons) {
+                // Note that results are not delivered on UI thread.
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        // Note that beacons reported here are already sorted by estimated
+                        // distance between device and beacon.
+                        List<Beacon> JaaleeBeacons = filterBeacons(beacons);
+                        getActionBar().setSubtitle("Found beacons: " + JaaleeBeacons.size());
+
+                        adapter.replaceWith(JaaleeBeacons);
+                    }
+                });
+            }
         });
-      }
-    });
-    
-    //BLE device around the phone 
-    beaconManager.setDeviceDiscoverListener(new DeviceDiscoverListener() {
-		
-		@Override
-		public void onBLEDeviceDiscovered(BLEDevice device) {
-			Log.i("HIVE", "On ble device  discovery:" + device.getMacAddress());
+
+        //BLE device around the phone
+        beaconManager.setDeviceDiscoverListener(new DeviceDiscoverListener() {
+
+            @Override
+            public void onBLEDeviceDiscovered(BLEDevice device) {
+                Log.i("HIVE", "On ble device  discovery:" + device.getMacAddress());
+            }
+        });
+    }
+
+    private List<Beacon> filterBeacons(List<Beacon> beacons) {
+        List<Beacon> filteredBeacons = new ArrayList<Beacon>(beacons.size());
+        for (Beacon beacon : beacons) {
+            if (beacon.getProximityUUID().equalsIgnoreCase(BEACON_PROXIMITY_UUID)) {
+                String request = null;
+                String response = null;
+
+                double distance = Math.min(Utils.computeAccuracy(beacon), 6.0);
+                if (distance < 1.) { // closer than 1 meter
+                    try {
+                        request = JSONUtil.pack("chosenOne", beacon.getMacAddress(), beacon.getMinor(), beacon.getMajor());
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+                    if (request.length() > 0) {
+                        try {
+                            response = HTTPClient.get(URL.concat("api/here"), request);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+
+                Log.i("LO", "LO: " + beacon.getProximityUUID() + " RE " + response);
+                filteredBeacons.add(beacon);
+            }
         }
-	});
-  }
-
-  private List<Beacon> filterBeacons(List<Beacon> beacons) {
-    List<Beacon> filteredBeacons = new ArrayList<Beacon>(beacons.size());
-    for (Beacon beacon : beacons) 
-    {
-        if ( beacon.getProximityUUID().equalsIgnoreCase(BEACON_PROXIMITY_UUID) )
-    	{
-            Log.i("LO", "LO: " +  beacon.getProximityUUID());
-    		filteredBeacons.add(beacon);
-    	}
-    }
-    return filteredBeacons;
-  }
-
-  @Override
-  public boolean onCreateOptionsMenu(Menu menu) {
-    getMenuInflater().inflate(R.menu.scan_menu, menu);
-    MenuItem refreshItem = menu.findItem(R.id.refresh);
-    refreshItem.setActionView(R.layout.actionbar_indeterminate_progress);
-    return true;
-  }
-
-  @Override
-  public boolean onOptionsItemSelected(MenuItem item) {
-    if (item.getItemId() == android.R.id.home) {
-      finish();
-      return true;
-    }
-    return super.onOptionsItemSelected(item);
-  }
-
-  @Override
-  protected void onDestroy() {
-    beaconManager.disconnect();
-
-    super.onDestroy();
-  }
-
-  @Override
-  protected void onStart() {
-    super.onStart();
-
-    // Check if device supports Bluetooth Low Energy.
-    if (!beaconManager.hasBluetooth()) {
-      Toast.makeText(this, "Device does not have Bluetooth Low Energy", Toast.LENGTH_LONG).show();
-      return;
+        return filteredBeacons;
     }
 
-    // If Bluetooth is not enabled, let user enable it.
-    if (!beaconManager.isBluetoothEnabled()) {
-      Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-      startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
-    } else {
-      connectToService();
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.scan_menu, menu);
+        MenuItem refreshItem = menu.findItem(R.id.refresh);
+        refreshItem.setActionView(R.layout.actionbar_indeterminate_progress);
+        return true;
     }
-  }
 
-  @Override
-  protected void onStop() {
-    try {
-		beaconManager.stopRanging(ALL_BEACONS_REGION);
-	} catch (RemoteException e) {
-		e.printStackTrace();
-	}
-    super.onStop();
-  }
-
-  @Override
-  protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-    if (requestCode == REQUEST_ENABLE_BT) {
-      if (resultCode == Activity.RESULT_OK) {
-        connectToService();
-      } else {
-        Toast.makeText(this, "Bluetooth not enabled", Toast.LENGTH_LONG).show();
-        getActionBar().setSubtitle("Bluetooth not enabled");
-      }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
-    super.onActivityResult(requestCode, resultCode, data);
-  }
 
-  private void connectToService() {
-    getActionBar().setSubtitle("Scanning...");
-    adapter.replaceWith(Collections.<Beacon>emptyList());
-    beaconManager.connect(new ServiceReadyCallback() {
-      @Override
-      public void onServiceReady() {
+    @Override
+    protected void onDestroy() {
+        beaconManager.disconnect();
+
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        // Check if device supports Bluetooth Low Energy.
+        if (!beaconManager.hasBluetooth()) {
+            Toast.makeText(this, "Device does not have Bluetooth Low Energy", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        // If Bluetooth is not enabled, let user enable it.
+        if (!beaconManager.isBluetoothEnabled()) {
+            Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+            startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
+        } else {
+            connectToService();
+        }
+    }
+
+    @Override
+    protected void onStop() {
         try {
-			beaconManager.startRangingAndDiscoverDevice(ALL_BEACONS_REGION);
-		} catch (RemoteException e) {
-			e.printStackTrace();
-		}
-      }
-    });
-  }
-
-  private AdapterView.OnItemClickListener createOnItemClickListener() {
-    return new AdapterView.OnItemClickListener() {
-      @Override
-      public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        if (getIntent().getStringExtra(EXTRAS_TARGET_ACTIVITY) != null) {
-          try {
-            Class<?> clazz = Class.forName(getIntent().getStringExtra(EXTRAS_TARGET_ACTIVITY));
-            Intent intent = new Intent(ListBeaconsActivity.this, clazz);
-            Beacon temp = adapter.getItem(position);
-            intent.putExtra(EXTRAS_BEACON, temp);
-
-            startActivity(intent);
-          } catch (ClassNotFoundException e) {
-            Log.e(TAG, "Finding class by name failed", e);
-          }
+            beaconManager.stopRanging(ALL_BEACONS_REGION);
+        } catch (RemoteException e) {
+            e.printStackTrace();
         }
-      }
-    };
-  }
+        super.onStop();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_ENABLE_BT) {
+            if (resultCode == Activity.RESULT_OK) {
+                connectToService();
+            } else {
+                Toast.makeText(this, "Bluetooth not enabled", Toast.LENGTH_LONG).show();
+                getActionBar().setSubtitle("Bluetooth not enabled");
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    private void connectToService() {
+        getActionBar().setSubtitle("Scanning...");
+        adapter.replaceWith(Collections.<Beacon>emptyList());
+        beaconManager.connect(new ServiceReadyCallback() {
+            @Override
+            public void onServiceReady() {
+                try {
+                    beaconManager.startRangingAndDiscoverDevice(ALL_BEACONS_REGION);
+                } catch (RemoteException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+
+    private AdapterView.OnItemClickListener createOnItemClickListener() {
+        return new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (getIntent().getStringExtra(EXTRAS_TARGET_ACTIVITY) != null) {
+                    try {
+                        Class<?> clazz = Class.forName(getIntent().getStringExtra(EXTRAS_TARGET_ACTIVITY));
+                        Intent intent = new Intent(ListBeaconsActivity.this, clazz);
+                        Beacon temp = adapter.getItem(position);
+                        intent.putExtra(EXTRAS_BEACON, temp);
+
+                        startActivity(intent);
+                    } catch (ClassNotFoundException e) {
+                        Log.e(TAG, "Finding class by name failed", e);
+                    }
+                }
+            }
+        };
+    }
 
 }

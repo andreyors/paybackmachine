@@ -68,8 +68,6 @@ public class AllDemosActivity extends Activity {
         }
 
         menu.addSubMenu(1, Menu.FIRST, 0, "Hive");
-        menu.addSubMenu(1, Menu.FIRST + 10, 1, "Settings");
-        menu.addSubMenu(1, Menu.FIRST + 20, 2, "Logout");
 
         return true;
     }
@@ -84,14 +82,6 @@ public class AllDemosActivity extends Activity {
             case Menu.FIRST:
                 Uri uri = Uri.parse("https://paybackmachine-andreyors.c9.io/");
                 startActivity(new Intent(Intent.ACTION_VIEW, uri));
-                break;
-            case Menu.FIRST + 10:
-                Uri url1 = Uri.parse("https://www.jaalee.com/store");
-                startActivity(new Intent(Intent.ACTION_VIEW, url1));
-                break;
-            case Menu.FIRST + 20:
-                Uri url2 = Uri.parse("http://www.jaalee.com/contact_en.html");
-                startActivity(new Intent(Intent.ACTION_VIEW, url2));
                 break;
         }
         return super.onOptionsItemSelected(item);

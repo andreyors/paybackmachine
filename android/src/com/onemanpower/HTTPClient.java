@@ -1,9 +1,9 @@
 package com.onemanpower;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
+import org.apache.http.HttpStatus;
+
+import java.io.*;
+import java.net.*;
 
 public class HTTPClient {
 
@@ -20,13 +20,32 @@ public class HTTPClient {
         URL obj = new URL(url);
         HttpURLConnection conn = (HttpURLConnection) obj.openConnection();
 
-        conn.setRequestMethod("GET");
+        conn.setDoOutput(false);
+
+        conn.setRequestMethod("POST");
+
         conn.setRequestProperty("User-Agent", USER_AGENT);
 
-        int responseCode = conn.getResponseCode();
+        conn.setRequestProperty("Content-Type", "application/json");
+        conn.setRequestProperty("Accept", "application/json");
 
-        BufferedReader in = new BufferedReader(
-                new InputStreamReader(conn.getInputStream()));
+        conn.connect();
+
+        OutputStream os = conn.getOutputStream();
+        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
+        writer.write(request);
+        writer.close();
+        os.close();
+
+        int status = conn.getResponseCode();
+
+        BufferedReader in;
+
+        if(status >= HttpStatus.SC_BAD_REQUEST)
+            in = new BufferedReader(new InputStreamReader(conn.getErrorStream()));
+        else
+            in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+
         String inputLine;
         StringBuffer response = new StringBuffer();
 
