@@ -112,8 +112,9 @@ public class ListBeaconsActivity extends Activity {
                 }
 
                 if (request.length() > 0) {
-                    if (distance < 1.) { // closer than 1 meter
+                    if (distance < 0.7) { // closer than 1 meter
                         try {
+
                             response = HTTPClient.get(URL.concat("api/here"), request);
                         } catch (Exception e) {
                             e.printStackTrace();
@@ -127,7 +128,7 @@ public class ListBeaconsActivity extends Activity {
                     }
                 }
 
-                Log.i("LO", "LO: " + beacon.getProximityUUID() + " RE " + response);
+                Log.i("LO", "LO: " + beacon.getProximityUUID() + " RE " + response + " DIS " + distance);
 
                 filteredBeacons.add(beacon);
             }
