@@ -1,1 +1,40 @@
-Hello
+{% extends "layout/base.twig" %}
+
+{% block title %}
+Welcome
+{% endblock %}
+
+{% block content %}
+<p></p>
+
+<div class="jumbotron">
+    <h1>Hive</h1>
+    <p>Be a good shopper</p>
+    <p style="text-align: right">
+        <a href="#" class="btn btn-lg btn-default">Learn now</a>
+    </p>
+</div>
+
+<div class="container">
+    <div class="row blocks">
+        <div class="col-lg-4 col-sm-6">
+            <h2><i class="fa fa-cart-plus"></i>&nbsp;New level</h2>
+            <p>
+                Touch the new shopping experience.
+            </p>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+            <h2><i class="fa fa-street-view"></i>&nbsp;Less money</h2>
+            <p>
+                Save your money for good stuff.
+            </p>
+        </div>
+        <div class="col-lg-4 col-sm-12">
+            <h2><i class="fa fa-clock-o"></i>&nbsp;Feel love</h2>
+            <p>
+                Be prepared to revolution
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
