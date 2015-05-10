@@ -1,0 +1,47 @@
+{% extends "layout/base.twig" %}
+
+{% block title %}
+Cashier desk
+{% endblock %}
+
+{% block content %}
+<p></p>
+
+<ol class="breadcrumb">
+  <li><a href="/">Home</a></li>
+  <li class="active">Cashier desk</li>
+</ol>
+
+<p></p>
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">Customer</div>
+            <div class="panel-body" id="partial-progress">
+                {% include 'partials/greetings.twig' %}
+            </div>
+        </div>
+    </div>
+    
+    <div class="clearfix"></div>
+    
+</div>
+
+<script type="text/javascript">
+    function pollProgress() {
+        console.log('here');
+        jQuery.ajax({
+            url: '/ajax/greetings',
+            success: function(data) {
+                jQuery('#partial-progress').html(data);
+            }
+        });
+        setTimeout(pollProgress, 3000); // you could choose not to continue on failure...
+    }
+
+    jQuery(document).ready(function() {
+        setTimeout(pollProgress, 3000);
+    });
+</script>
+{% endblock %}
