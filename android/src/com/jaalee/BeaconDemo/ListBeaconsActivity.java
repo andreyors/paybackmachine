@@ -104,16 +104,23 @@ public class ListBeaconsActivity extends Activity {
                 String response = null;
 
                 double distance = Math.min(Utils.computeAccuracy(beacon), 6.0);
-                if (distance < 1.) { // closer than 1 meter
-                    try {
-                        request = JSONUtil.pack("chosenOne", beacon.getMacAddress(), beacon.getMinor(), beacon.getMajor());
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
 
-                    if (request.length() > 0) {
+                try {
+                    request = JSONUtil.pack("chosenOne", beacon.getMacAddress(), beacon.getMinor(), beacon.getMajor());
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+                if (request.length() > 0) {
+                    if (distance < 1.) { // closer than 1 meter
                         try {
                             response = HTTPClient.get(URL.concat("api/here"), request);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    } else {
+                        try {
+                            response = HTTPClient.get(URL.concat("api/left"), request);
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -121,6 +128,7 @@ public class ListBeaconsActivity extends Activity {
                 }
 
                 Log.i("LO", "LO: " + beacon.getProximityUUID() + " RE " + response);
+
                 filteredBeacons.add(beacon);
             }
         }
